@@ -8,11 +8,11 @@ const {
   GraphQLString
 } = require('graphql')
 
-fetch(
-  'https://www.goodreads.com/author/show.xml?id=4432&key='
-)
-.then(response => response.text())
-.then(parseXML)
+// fetch(
+//   'https://www.goodreads.com/author/show.xml?id=4432&key=9QxZHmnLmxwJCEpZpPOOA'
+// )
+// .then(response => response.text())
+// .then(parseXML)
 
 const AuthorType = new GraphQLObjectType({
   name: 'Author',
@@ -22,7 +22,7 @@ const AuthorType = new GraphQLObjectType({
   })
 })
 
-module.export = new GraphQLSchema({
+module.exports = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     description: '...',
